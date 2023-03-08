@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'consts/global_colors.dart';
 import 'screens/home_screen.dart';
 
@@ -14,9 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter 3 ',
+      title: 'Flutter 3.0.4 ',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.red,
+        scaffoldBackgroundColor: lightScaffoldColor,
         primaryColor: lightCardColor,
         appBarTheme: AppBarTheme(
           iconTheme: IconThemeData(
@@ -35,24 +36,18 @@ class MyApp extends StatelessWidget {
         textSelectionTheme: const TextSelectionThemeData(
           cursorColor: Colors.black,
           selectionColor: Colors.blue,
-
           // selectionHandleColor: Colors.blue,
         ),
-
         // textTheme: TextTheme()
         // textTheme: Theme.of(context).textTheme.apply(
         //       bodyColor: Colors.black,
         //       displayColor: Colors.black,
         //     ),
         cardColor: lightCardColor,
-        brightness: Brightness.light,
-        colorScheme: ThemeData()
-            .colorScheme
-            .copyWith(
+        brightness: Brightness.light, colorScheme: ThemeData().colorScheme.copyWith(
               secondary: lightIconsColor,
               brightness: Brightness.light,
-            )
-            .copyWith(background: lightBackgroundColor),
+            ).copyWith(background: lightBackgroundColor),
       ),
       home: const HomeScreen(),
     );
