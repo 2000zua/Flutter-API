@@ -51,13 +51,14 @@ class SaleWidget extends StatelessWidget {
                         child: SizedBox(
                           width: double.infinity,
                           child: FittedBox(
+                            // conter o tamanho dos caaacter para nao passar o seu pai
                             fit: BoxFit.fill,
                             child: Text(
                               "50 %\nOFF",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                // fontSize: 300,
+                                //fontSize: 30,
                               ),
                             ),
                           ),

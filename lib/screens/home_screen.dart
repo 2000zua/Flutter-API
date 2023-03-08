@@ -22,6 +22,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // controllher
   late TextEditingController _textEditingController;
   // List<ProductsModel> productsList = [];
   @override
@@ -49,14 +50,17 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    //pegar o tamanho da tela
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () {
+        // ofuscar o teclado
         FocusScope.of(context).unfocus();
       },
       child: Scaffold(
+          // app bar pagina inicial
           appBar: AppBar(
-            // elevation: 4,
+            //elevation: 4,
             title: const Text('Home'),
             leading: AppBarIcons(
               function: () {
@@ -85,6 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
+          // corpo do conteudo geral da pagina principal
           body: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
@@ -99,6 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       hintText: "Search",
                       filled: true,
                       fillColor: Theme.of(context).cardColor,
+                      // bordas
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                         borderSide: BorderSide(
@@ -123,6 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Expanded(
                   child: SingleChildScrollView(
                     child: Column(children: [
+                      // corosell
                       SizedBox(
                         height: size.height * 0.25,
                         child: Swiper(
@@ -131,6 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             return const SaleWidget();
                           },
                           autoplay: true,
+                          // button paginations
                           pagination: const SwiperPagination(
                               alignment: Alignment.bottomCenter,
                               builder: DotSwiperPaginationBuilder(

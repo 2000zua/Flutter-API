@@ -65,6 +65,7 @@ class FeedsWidget extends StatelessWidget {
                 child: FancyShimmerImage(
                   height: size.height * 0.2,
                   width: double.infinity,
+                  // se tiver um erro o pegar a imagem da net, vamos usar esta img
                   errorWidget: const Icon(
                     IconlyBold.danger,
                     color: Colors.red,
@@ -83,7 +84,7 @@ class FeedsWidget extends StatelessWidget {
                   maxLines: 2,
                   style: const TextStyle(
                     fontSize: 17,
-                    //  fontFamily: 'Roboto',
+                    fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
                   ),
                 ),
